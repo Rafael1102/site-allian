@@ -1,9 +1,12 @@
-*{margin:0;padding:0;outline:none}
+*{margin: 0;padding: 0;outline:none}
+
 .control{
-  background-color: #400c40;
-  margin-left: 5px;
-  margin-top: 5px;
-  position:absolute;
+  width: 10px;
+
+  height: 100%;
+  margin-top: 8px;
+  align-content: center;
+  background-color: #ffffff;
 }
 
 #conteudo{
@@ -19,38 +22,35 @@
   height: 300px;
   margin-right: 10px;
   margin-left: 10px;
-  background: none;
+  background: rgba(0, 0, 0, 0.425);
   cursor: pointer;
+  border-radius: 20%;
   transition: all 1s ease;
 }
 
 .card-img {
-    width: 100%;
+    width: 70%;
     height: auto;
     display: block;
 }
 .card:hover{
   background-size: 110% 110%;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 .card-1{
   background-image: url(http://migre.me/vditk); 
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 60% 60%;
 }
 .card-2{
   background-image: url(http://migre.me/vdixa); 
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-.card-3{
-  background-image: url(http://migre.me/vdiAw); 
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 60% 60%;
 }
 img{
     width: 50%; 
-    height: 50px;
+    height: 50%;
+    align-items: center;
 }
 #layer{
   width: 100%;
@@ -81,45 +81,28 @@ img{
   opacity: none;
   transition: all 0.5s ease;
 }
-#comprar{
-  margin-top: 10px;
-  font-size: 15px;
-  background: #06304c;
-  border: none;
-  border-radius: 5px;
-  width: 70%;
-  height: 50px;
-  font-family: 'Helvetica';
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-  opacity: none;
-  transition: all 0.5s ease;
-}
 
 #add:hover{
   transform: scale(1.05);
   box-shadow: 0px 2px 2px rgba(6, 48, 76, 0.80);
   transition: all 0.5s ease;
 }
-#comprar:hover{
-  transform: scale(1.05);
-  box-shadow: 0px 2px 2px rgba(6, 48, 76, 0.80);
-  transition: all 0.5s ease;
-}
 
 .footer {
-  margin-top: auto; /* Empurra o footer para o final da página */
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  padding: 10px;
-  background-color: #333; /* Cor de fundo do rodapé */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
+
 
 .custom-btn2 {
   display: inline-flex; /* Altera display para flex */
   align-items: center; /* Centraliza verticalmente o conteúdo */
-  padding: 10px;
+  padding: 3px;
   color: #ffffff;
   background-color: none; /* Cor típica do Instagram */
   border: none; /* Remove as bordas */
@@ -138,6 +121,6 @@ img{
 }
 
 .custom-btn2 .icon {
-  width: 40px; /* Tamanho do ícone */
-  height: 40px; /* Tamanho do ícone */
+  width: 20px; /* Tamanho do ícone */
+  height: 20px; /* Tamanho do ícone */
 }

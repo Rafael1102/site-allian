@@ -193,25 +193,28 @@
    }
    
    .footer {
-     margin-top: auto; /* Empurra o footer para o final da página */
-     display: flex;
-     justify-content: center; /* Centraliza o conteúdo horizontalmente */
-     padding: 10px;
-     background-color: #333; /* Cor de fundo do rodapé */
-   }
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: flex;
+    bottom: 0;
+    width: 100%;
+  }
    
    .custom-btn2 {
-     display: inline-flex; /* Altera display para flex */
-     align-items: center; /* Centraliza verticalmente o conteúdo */
-     padding: 10px;
-     color: #ffffff;
-     background-color: none; /* Cor típica do Instagram */
-     border: none; /* Remove as bordas */
-     border-radius: 5px;
-     text-decoration: none; /* Remove sublinhado */
-     font-weight: bold;
-     transition: background-color 0.3s ease;
-   }
+    display: inline-flex; /* Altera display para flex */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    padding: 3px;
+    color: #ffffff;
+    background-color: none; /* Cor típica do Instagram */
+    border: none; /* Remove as bordas */
+    border-radius: 5px;
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
    
    .custom-btn2:hover {
      background-color: none; /* Cor mais escura para hover */
@@ -222,7 +225,6 @@
    }
    
    .custom-btn2 .icon {
-     width: 40px; /* Tamanho do ícone */
-     height: 40px; /* Tamanho do ícone */
-   }
-   
+    width: 20px; /* Tamanho do ícone */
+    height: 20px; /* Tamanho do ícone */
+  }
