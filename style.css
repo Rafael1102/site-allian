@@ -1,0 +1,228 @@
+/* Remove o padding e a margem padrão de html e body.
+   Define a cor de fundo como roxo e a cor do texto como branco.
+   Define uma lista de fontes a serem usadas. */
+   html,
+   body {
+     padding: 0;
+     margin: 0;
+     color: white;
+     background-color: #800080;
+     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+   }
+   
+   .header {
+     display: flex;
+     align-items: center; /* Alinha verticalmente os itens ao centro */
+     padding: 10px; /* Adiciona algum padding para espaçamento */
+   }
+   
+   p {
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     text-align: center;
+     font-size: 18px;
+     color: #ffffff;
+   }
+   
+   .custom-btn {
+     width: 130px;
+     height: 40px;
+     color: #fff;
+     border-radius: 5px;
+     padding: 10px 25px;
+     font-family: 'Lato', sans-serif;
+     font-weight: 500;
+     background: transparent;
+     cursor: pointer;
+     transition: all 0.5s ease;
+     position: relative;
+     display: inline-block;
+     box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                 7px 7px 20px 0px rgb(0, 0, 0,.1),
+                 4px 4px 5px 0px rgba(0,0,0,.1);
+     outline: none;
+   }
+   
+   a {
+     color: inherit;
+     text-decoration: none;
+   }
+   
+   * {
+     box-sizing: border-box;
+   }
+   
+   main {
+     min-height: 100vh;
+     padding: 4rem 2rem;
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .title {
+     margin: 0;
+     line-height: 1.15;
+     font-size: 2rem;
+   }
+   
+   .subtitle {
+     margin: 0;
+     line-height: 1.15;
+     font-size: 3rem;
+   }
+   
+   .title,
+   .description {
+     text-align: center;
+   }
+   
+   .description {
+     margin: 4rem 0;
+     line-height: 1.5;
+     font-size: 1.5rem;
+   }
+   
+   .code {
+     background: #fafafa;
+     border-radius: 5px;
+     padding: 0.75rem;
+     font-size: 1.1rem;
+     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+       Bitstream Vera Sans Mono, Courier New, monospace;
+   }
+   
+   .grid {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     max-width: 800px;
+   }
+   
+   .card {
+     margin: 1rem;
+     padding: 1.5rem;
+     text-align: left;
+     color: inherit;
+     text-decoration: none;
+     border: 1px solid #eaeaea;
+     border-radius: 10px;
+     transition: color 0.15s ease, border-color 0.15s ease;
+     max-width: 300px;
+     background-color: rgba(128, 128, 128, 0.4); /* fundo cinza semi-transparente */
+     box-shadow: 10px 15px 19px rgba(0, 0, 0, 0.3); /* sombra no fundo */
+   }
+   
+   .card:hover,
+   .card:focus,
+   .card:active {
+     color: #0070f3;
+     border-color: #0070f3;
+   }
+   
+   .card h2 {
+     margin: 0 0 1rem 0;
+     font-size: 1.5rem;
+   }
+   
+   .card p {
+     margin: 0;
+     font-size: 1.25rem;
+     line-height: 1.5;
+   }
+   
+   @media (max-width: 600px) {
+     .grid {
+       width: 100%;
+       flex-direction: column;
+     }
+   }
+   
+   .logo {
+     height: 130px; /* Ajuste o tamanho conforme necessário */
+   }
+   
+   .btn-1 {
+     position: absolute; /* Posicionamento absoluto */
+     top: 10px; /* Ajuste conforme necessário */
+     left: 10px; /* Ajuste conforme necessário */
+     border: none;
+     color: #ffffff;
+     font-weight: bold; /* Aumentar a espessura da fonte */
+     padding: 10px 20px; /* Adicionando algum padding para melhorar a aparência */
+     background-color: transparent; /* Para garantir que o fundo do botão seja transparente */
+   }
+   
+   .button-container {
+     position: absolute; /* Posicionamento absoluto */
+     right: 15%; /* Ajuste conforme necessário */
+     top: 8%; /* Centraliza verticalmente */
+     transform: translateY(-50%); /* Ajusta a posição para centralizar verticalmente */
+   }
+   
+   .btn-1:after {
+     position: absolute;
+     content: "";
+     width: 0;
+     height: 100%;
+     top: 0;
+     left: 0;
+     direction: rtl;
+     z-index: -1;
+     box-shadow:
+      -7px -7px 20px 0px #fff9,
+      -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002,
+      4px 4px 5px 0px #0001;
+     transition: all 0.3s ease;
+   }
+   .btn-1:hover {
+     color: #700585;
+   }
+   .btn-1:hover:after {
+     left: auto;
+     right: 0;
+     width: 100%;
+   }
+   .btn-1:active {
+     top: 2px;
+   }
+   
+   .footer {
+     margin-top: auto; /* Empurra o footer para o final da página */
+     display: flex;
+     justify-content: center; /* Centraliza o conteúdo horizontalmente */
+     padding: 10px;
+     background-color: #333; /* Cor de fundo do rodapé */
+   }
+   
+   .custom-btn2 {
+     display: inline-flex; /* Altera display para flex */
+     align-items: center; /* Centraliza verticalmente o conteúdo */
+     padding: 10px;
+     color: #ffffff;
+     background-color: none; /* Cor típica do Instagram */
+     border: none; /* Remove as bordas */
+     border-radius: 5px;
+     text-decoration: none; /* Remove sublinhado */
+     font-weight: bold;
+     transition: background-color 0.3s ease;
+   }
+   
+   .custom-btn2:hover {
+     background-color: none; /* Cor mais escura para hover */
+   }
+   
+   .custom-btn2:active {
+     background-color: #a51f48; /* Cor mais escura para quando o botão é clicado */
+   }
+   
+   .custom-btn2 .icon {
+     width: 40px; /* Tamanho do ícone */
+     height: 40px; /* Tamanho do ícone */
+   }
+   
