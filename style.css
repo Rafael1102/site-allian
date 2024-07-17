@@ -197,12 +197,13 @@
     color: #fff;
     text-align: center;
     padding: 5px;
-    position: flex;
+    position: fixed;
     bottom: 0;
     width: 100%;
   }
-   
-   .custom-btn2 {
+  
+  
+  .custom-btn2 {
     display: inline-flex; /* Altera display para flex */
     align-items: center; /* Centraliza verticalmente o conteúdo */
     padding: 3px;
@@ -215,16 +216,15 @@
     transition: background-color 0.3s ease;
   }
   
-   
-   .custom-btn2:hover {
-     background-color: none; /* Cor mais escura para hover */
-   }
-   
-   .custom-btn2:active {
-     background-color: #a51f48; /* Cor mais escura para quando o botão é clicado */
-   }
-   
-   .custom-btn2 .icon {
+  .custom-btn2:hover {
+    background-color: none; /* Cor mais escura para hover */
+  }
+  
+  .custom-btn2:active {
+    background-color: #521697; /* Cor mais escura para quando o botão é clicado */
+  }
+  
+  .custom-btn2 .icon {
     width: 20px; /* Tamanho do ícone */
     height: 20px; /* Tamanho do ícone */
   }
