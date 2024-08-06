@@ -2,7 +2,7 @@
 
 .nav-bar{
   background-color: #808080;
-  padding: 8px 15px;
+  padding: 2px 5px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -14,18 +14,17 @@
 
 .nav-bar button {
   background-color:  #800080;
-  border: 1px transparent none;
+  border: 1px transparent rgba(0, 0, 0, 0.274);
   border-radius: 20px;
-  padding: 1px 10px;
+  padding: 0.5px;
   cursor:pointer;
-  font-size: 16px;
   display: flex;
   align-items: center;
 }
 .nav-bar button img {
   margin-right: 1px;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
 }
 .nav-bar button:hover{
   background-color: #800080;
@@ -110,17 +109,19 @@ img{
   transition: all 0.5s ease;
 }
 
+.content {
+  min-height: 1500px; /* Apenas para exemplo, aumenta a altura do conteúdo */
+}
 .footer {
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 5px;
   position: fixed;
-  bottom: 0;
+  bottom: -100px; /* Esconde o footer inicialmente */
   width: 100%;
+  transition: bottom 0.3s ease; /* Transição suave ao aparecer */
 }
-
-
 .custom-btn2 {
   display: inline-flex; /* Altera display para flex */
   align-items: center; /* Centraliza verticalmente o conteúdo */
@@ -133,15 +134,12 @@ img{
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-
 .custom-btn2:hover {
   background-color: none; /* Cor mais escura para hover */
 }
-
 .custom-btn2:active {
   background-color: #521697; /* Cor mais escura para quando o botão é clicado */
 }
-
 .custom-btn2 .icon {
   width: 20px; /* Tamanho do ícone */
   height: 20px; /* Tamanho do ícone */
