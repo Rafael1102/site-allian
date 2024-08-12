@@ -10,16 +10,31 @@
      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
    }
-   .nav-bar{
-    background-color: #808080;
-    padding: 10px 20px;
+   .top-bar {
+    position: fixed; /* Fixa a barra no topo da página */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #503a48; /* Cor de fundo da barra */
+    padding: 5px 20px;
     display: flex;
-    justify-content: space-between;/* espaço dos elementos*/
-    align-items: center;
+    justify-content: space-between; /* Espaça os elementos dentro da barra */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    z-index: 1000; /* Garante que a barra esteja sobre outros elementos */
+  }
+   .nav-bar {
+    background-color: #503a48; /* Cor de fundo da barra */
+    background-color: #0a0a0a;
+     padding: 10px 10px;
+     display: flex;
+     justify-content: space-between; /* Espaço dos elementos */
+     align-items: center;
    }
-
-   .logo{}
-
+   
+   .logo {
+     height: 50px; /* Ajuste o tamanho conforme necessário */
+   }
+   
    .header {
      display: flex;
      align-items: center; /* Alinha verticalmente os itens ao centro */
@@ -90,10 +105,25 @@
    }
    
    .description {
-     margin: 4rem 0;
-     line-height: 1.5;
-     font-size: 1.5rem;
-   }
+    margin: 4rem 0; /* Define uma margem superior e inferior de 4rem, mantendo as laterais com 0 */
+    line-height: 1.5; /* Define a altura da linha como 1,5 vezes o tamanho da fonte, para melhorar a legibilidade */
+    font-size: 1.5rem; /* Define o tamanho da fonte para 1.5rem, que é relativo ao tamanho da fonte base */
+  }
+  
+  @media (max-width: 768px) {
+    .description {
+      margin: 2rem 0; /* Reduz a margem superior e inferior para 2rem em telas com largura até 768px */
+      font-size: 1.25rem; /* Reduz o tamanho da fonte para 1.25rem em telas com largura até 768px */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .description {
+      margin: 1rem 0; /* Reduz ainda mais a margem superior e inferior para 1rem em telas com largura até 480px */
+      font-size: 1rem; /* Reduz o tamanho da fonte para 1rem em telas com largura até 480px */
+    }
+  }
+  
    
    .code {
      background: #fafafa;
@@ -122,8 +152,8 @@
      border-radius: 10px;
      transition: color 0.15s ease, border-color 0.15s ease;
      max-width: 300px;
-     background-color: rgba(128, 128, 128, 0.4); /* fundo cinza semi-transparente */
-     box-shadow: 10px 15px 19px rgba(0, 0, 0, 0.3); /* sombra no fundo */
+     background-color: rgba(128, 128, 128, 0.4); /* Fundo cinza semi-transparente */
+     box-shadow: 10px 15px 19px rgba(0, 0, 0, 0.3); /* Sombra no fundo */
    }
    
    .card:hover,
@@ -151,48 +181,38 @@
      }
    }
    
-   .logo {
-     height: 130px; /* Ajuste o tamanho conforme necessário */
-   }
-   
-   .btn-1 {
-     position: absolute; /* Posicionamento absoluto */
-     top: 10px; /* Ajuste conforme necessário */
-     left: 10px; /* Ajuste conforme necessário */
-     border: none;
-     color: #ffffff;
-     font-weight: bold; /* Aumentar a espessura da fonte */
-     padding: 10px 20px; /* Adicionando algum padding para melhorar a aparência */
-     background-color: transparent; /* Para garantir que o fundo do botão seja transparente */
-   }
-   
+   /* Estilo do botão fixo no topo */
    .button-container {
-     position: fixed; /* Posicionamento absoluto */
-     right: 15%; /* Ajuste conforme necessário */
-     top: 8%; /* Centraliza verticalmente */
-     transform: translateY(-50%); /* Ajusta a posição para centralizar verticalmente */
+     position: fixed; /* Fixar no topo da página */
+     top: 0; /* Colocado no topo */
+     right: 0; /* Alinhado à direita */
+     padding: 10px; /* Adiciona algum padding ao redor */
+     z-index: 1000; /* Mantém o botão acima de outros elementos */
+     background-color: none; /* Cor de fundo para destacar */
    }
    
-   .btn-1:after {
-     position: absolute;
-     content: "";
-     width: 0;
-     height: 100%;
-     top: 0;
-     left: 0;
-     
+   /* Estilo do botão dentro do contêiner fixo */
+   .custom-btn.btn-1 {
+     width: 130px; /* Ajuste conforme necessário */
+     height: 40px; /* Ajuste conforme necessário */
+     color: #ffffff;
+     border-radius: 8px;
+     padding: 5px 10px; /* Adiciona padding interno */
+     background-color: transparent; /* Fundo transparente */
+     border: none; /* Remove a borda */
+     font-family: 'Lato', sans-serif;
+     font-weight: bold; /* Aumenta a espessura da fonte */
+     cursor: pointer; /* Cursor em forma de mãozinha */
+     transition: all 0.3s ease; /* Transição suave */
    }
-   .btn-1:hover {
-     color: #700585;
-   }
-   .btn-1:hover:after {
-     left: auto;
-     right: 0;
-     width: 100%;
-   }
-   .btn-1:active {
-     top: 2px;
-   }
+   
+   .custom-btn.btn-1:hover {
+    color: #700585; /* Cor do texto quando o botão é hover */
+  }
+  
+  .custom-btn.btn-1:active {
+    top: 2px; /* Efeito de botão pressionado */
+  }
    
    .footer {
     background-color: #333;
@@ -203,30 +223,30 @@
     bottom: 0;
     width: 100%;
   }
-  
-  
-  .custom-btn2 {
-    display: inline-flex; /* Altera display para flex */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    padding: 3px;
-    color: #ffffff;
-    background-color: none; /* Cor típica do Instagram */
-    border: none; /* Remove as bordas */
-    border-radius: 5px;
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .custom-btn2:hover {
-    background-color: none; /* Cor mais escura para hover */
-  }
-  
-  .custom-btn2:active {
-    background-color: #521697; /* Cor mais escura para quando o botão é clicado */
-  }
-  
-  .custom-btn2 .icon {
-    width: 20px; /* Tamanho do ícone */
-    height: 20px; /* Tamanho do ícone */
-  }
+   
+   .custom-btn2 {
+     display: inline-flex; /* Altera display para flex */
+     align-items: center; /* Centraliza verticalmente o conteúdo */
+     padding: 3px;
+     color: #ffffff;
+     background-color: none; /* Cor típica do Instagram */
+     border: none; /* Remove as bordas */
+     border-radius: 5px;
+     text-decoration: none; /* Remove sublinhado */
+     font-weight: bold;
+     transition: background-color 0.3s ease;
+   }
+   
+   .custom-btn2:hover {
+     background-color: none; /* Cor mais escura para hover */
+   }
+   
+   .custom-btn2:active {
+     background-color: #521697; /* Cor mais escura para quando o botão é clicado */
+   }
+   
+   .custom-btn2 .icon {
+     width: 20px; /* Tamanho do ícone */
+     height: 20px; /* Tamanho do ícone */
+   }
+   
