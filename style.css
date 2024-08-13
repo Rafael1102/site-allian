@@ -15,12 +15,26 @@
     top: 0;
     left: 0;
     right: 0;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
     background-color: #503a48; /* Cor de fundo da barra */
     padding: 5px 20px;
     display: flex;
     justify-content: space-between; /* Espaça os elementos dentro da barra */
     align-items: center; /* Alinha verticalmente os itens ao centro */
     z-index: 1000; /* Garante que a barra esteja sobre outros elementos */
+  }
+
+  @media (max-width: 768px) {
+    .top-bar {
+      height: 3rem; /* Define uma altura específica para telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .top-bar {
+      height: 2.5rem; /* Define uma altura menor para telas muito pequenas */
+    }
+
   }
    .nav-bar {
     background-color: #503a48; /* Cor de fundo da barra */
@@ -245,8 +259,19 @@
      background-color: #521697; /* Cor mais escura para quando o botão é clicado */
    }
    
+   .button-container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+
    .custom-btn2 .icon {
-     width: 20px; /* Tamanho do ícone */
-     height: 20px; /* Tamanho do ícone */
+    width: 25px; /* Aumenta o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
    }
-   
+
+   .small-text {
+    font-size: 0.75rem; /* Define uma fonte pequena */
+    margin-top: 10px; /* Adiciona um pequeno espaço acima do texto */
+  }
