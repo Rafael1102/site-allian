@@ -46,7 +46,7 @@
    }
    
    .logo {
-     height: 50px; /* Ajuste o tamanho conforme necessário */
+     height: 80px; /* Ajuste o tamanho conforme necessário */
    }
    
    .header {
@@ -198,7 +198,7 @@
    /* Estilo do botão fixo no topo */
    .button-container {
      position: fixed; /* Fixar no topo da página */
-     top: 0; /* Colocado no topo */
+     top: 10px; /* Colocado no topo */
      right: 0; /* Alinhado à direita */
      padding: 10px; /* Adiciona algum padding ao redor */
      z-index: 1000; /* Mantém o botão acima de outros elementos */
@@ -207,10 +207,10 @@
    
    /* Estilo do botão dentro do contêiner fixo */
    .custom-btn.btn-1 {
-     width: 130px; /* Ajuste conforme necessário */
-     height: 40px; /* Ajuste conforme necessário */
+     width: 80px; /* largura */
+     height: 30px; /* Ajuste conforme necessário */
      color: #ffffff;
-     border-radius: 8px;
+     border-radius: 10px;/*Arredondamento*/
      padding: 5px 10px; /* Adiciona padding interno */
      background-color: transparent; /* Fundo transparente */
      border: none; /* Remove a borda */
