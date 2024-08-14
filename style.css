@@ -16,8 +16,7 @@
     left: 0;
     right: 0;
     height: auto; /* Permite que a altura se ajuste ao conteúdo */
-    background-color: #503a48; /* Cor de fundo da barra */
-    padding: 5px 20px;
+    background-color: none;
     display: flex;
     justify-content: space-between; /* Espaça os elementos dentro da barra */
     align-items: center; /* Alinha verticalmente os itens ao centro */
@@ -26,7 +25,7 @@
 
   @media (max-width: 768px) {
     .top-bar {
-      height: 3rem; /* Define uma altura específica para telas menores */
+      height: 10rem; /* Define uma altura específica para telas menores */
     }
   }
   

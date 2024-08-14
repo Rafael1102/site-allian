@@ -1,66 +1,84 @@
+/* Aplica estilos gerais ao corpo da página */
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #700585;
-    box-sizing: border-box;
-    color:white
+    font-family: 'Times New Roman', Times, serif, sans-serif; /* Define a fonte principal com opções de fallback */
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o preenchimento padrão do navegador */
+    background-color: #800080; /* Define a cor de fundo roxa */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura do elemento */
+    color: white; /* Define a cor do texto como branca */
 }
 
+/* Contêiner principal do conteúdo da página */
 .content {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    max-width: 800px; /* Limita a largura máxima a 800px */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 20px; /* Adiciona um preenchimento de 20px em todos os lados */
 }
 
+/* Estilo para o título */
 .title {
-    text-align: center;
-    margin-bottom: 18   px;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 18px; /* Adiciona uma margem inferior de 18px */
 }
 
+/* Contêiner para o formulário, permite o ajuste e o espaço entre os itens */
 .form-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; /* Utiliza um layout flexível */
+    flex-wrap: wrap; /* Permite que os itens se ajustem para a linha seguinte se não caberem em uma única linha */
+    gap: 20px; /* Espaçamento de 20px entre os itens filhos */
 }
 
+/* Estilo para cada item do formulário */
 .form-item {
-    width: 100%;
-    margin-bottom: 15px;
+    width: 100%; /* Ocupa 100% da largura do contêiner */
+    margin-bottom: 15px; /* Adiciona uma margem inferior de 15px */
 }
 
+/* Estilo para colunas que ocupam 50% da largura do contêiner menos o espaço entre elas */
 .col-5 {
-    width: calc(50% - 10px);
+    width: calc(50% - 10px); /* Calcula 50% da largura menos 10px de espaço para o gap */
 }
 
+/* Estilo para os rótulos dos campos do formulário */
 .label {
-    display: block;
-    margin-bottom: 5px;
+    display: block; /* Exibe o rótulo como um bloco para ocupar toda a largura disponível */
+    margin-bottom: 5px; /* Adiciona uma margem inferior de 5px */
 }
 
+/* Estilo comum para campos de entrada e áreas de texto */
 .input, .textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    width: 90%; /* Ocupa 100% da largura do contêiner */
+    padding: 10px; /* Adiciona um preenchimento interno de 10px */
+    border: 1px solid #ccc; /* Define uma borda de 1px de cor cinza claro */
+    border-radius: 5px; /* Aplica bordas arredondadas com um raio de 5px */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
 }
 
+.input-pr{
+    width: 80%;/*vai ocupar um tamanho de 80% da pag*/
+    padding: 10px;/*preenhimento interno*/
+    border: 1px solid #ccc; /* Define uma borda de 1px de cor cinza claro */
+    border-radius: 5px; /* Aplica bordas arredondadas com um raio de 5px */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+}
+/* Estilo específico para áreas de texto */
 .textarea {
-    height: 100px;
+    height: 100px; /* Define uma altura fixa de 100px */
 }
 
+/* Estilo para o botão de enviar */
 .btn-enviar {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #007BFF; /* Define uma cor de fundo azul */
+    color: white; /* Define a cor do texto como branca */
+    padding: 10px 20px; /* Adiciona preenchimento de 10px acima e abaixo, e 20px nas laterais */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Aplica bordas arredondadas com um raio de 5px */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
 }
 
+/* Estilo para o botão de enviar quando o cursor está sobre ele */
 .btn-enviar:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Altera a cor de fundo para um azul mais escuro quando o cursor está sobre o botão */
 }
