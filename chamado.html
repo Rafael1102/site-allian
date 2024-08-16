@@ -33,56 +33,5 @@
             </form>
         </div>
     </div>
-
-    <script>
-        document.getElementById('chamadoForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-            
-            // Obtém os dados do formulário
-            const loja = document.getElementById('name').value;
-            const responsavel = document.getElementById('lastname').value;
-            const anydeskId = document.getElementById('anydesk').value;
-            const problema = document.getElementById('textarea').value;
-
-            // Monta a mensagem
-            const message = *Chamado:*\n*Loja:* ${loja}\n*Responsável:* ${responsavel}\n*ID Anydesk:* ${anydeskId}\n*Problema:* ${problema};
-
-            // Substitua as credenciais e números corretamente
-            const accountSid = 'ACc5b8542429919483f1287a86ce96473c';
-            const authToken = 'b2851e5701300e6614676e10abbac93d';
-            const fromNumber = 'whatsapp:+14155238886';
-            const toNumber = 'whatsapp:+5591982817656';
-
-            // Codificação em Base64 do Account SID e Auth Token
-            const authString = ${accountSid}:${authToken};
-            const encodedAuthString = btoa(authString);
-
-            // Envia a requisição para a API da Twilio
-            fetch(https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json, {
-                method: 'POST',
-                headers: {
-                    'Authorization': Basic ${encodedAuthString},
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: new URLSearchParams({
-                    From: fromNumber,
-                    To: toNumber,
-                    Body: message
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.sid) {
-                    alert('Mensagem enviada com sucesso para o WhatsApp!');
-                } else {
-                    alert('Falha ao enviar a mensagem. Tente novamente.');
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-                alert('Ocorreu um erro. Tente novamente.');
-            });
-        });
-    </script>
 </body>
 </html>
