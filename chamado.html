@@ -20,8 +20,8 @@
                     <input type="text" id="lastname" placeholder="Seu nome" class="input-pr" required>
                 </div>
                 <div class="form-item">
-                    <label for="email" class="label">ID ANYDESK</label>
-                    <input type="email" id="email" class="input" required>
+                    <label for="anydesk" class="label">ID ANYDESK</label>
+                    <input type="number" id="anydesk" class="input" required>
                 </div>
                 <div class="form-item">
                     <label for="textarea" class="label">PROBLEMA APRESENTADO</label>
@@ -41,7 +41,7 @@
             // Obtém os dados do formulário
             const loja = document.getElementById('name').value;
             const responsavel = document.getElementById('lastname').value;
-            const anydeskId = document.getElementById('email').value;
+            const anydeskId = document.getElementById('anydesk').value;
             const problema = document.getElementById('textarea').value;
 
             // Monta a mensagem
