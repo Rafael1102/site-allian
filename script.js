@@ -20,8 +20,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Configuração do Twilio
-const accountSid = 'SEU_ACCOUNT_SID';
-const authToken = 'SEU_AUTH_TOKEN';
+const accountSid = 'ACc5b8542429919483f1287a86ce96473c';
+const authToken = '864e3f2be1fb201a5fb5f9884d5bb5e5';
 const client = twilio(accountSid, authToken);
 
 // Middleware para lidar com dados POST
